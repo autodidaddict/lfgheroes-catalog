@@ -1,0 +1,31 @@
+{
+    "$id": "https://lfgheroes.com/events/UserIdentityLinked",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "UserIdentityLinked",
+    "type": "object",
+    "properties": {
+        "userId": {
+            "type": "string",
+            "description": "Globally unique identifier for this user"
+        },
+        "identityId": {
+            "type": "string",
+            "description": "Unique ID of the linked identity"
+        },
+        "provider": {
+            "type": "string",
+            "description": "The provider type identifier for this identity",
+            "enum": ["google", "github"]
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "Timestamp indicating when the identity link occurred"
+        }
+    },
+    "required": [
+        "userId",
+        "identityId",
+        "provider",
+        "timestamp"
+    ]
+}

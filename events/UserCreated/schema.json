@@ -1,0 +1,52 @@
+{
+    "$id": "https://lfgheroes.com/events/UserCreated",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "UserCreated",
+    "type": "object",
+    "properties": {
+        "userId": {
+            "type": "string",
+            "description": "Globally unique identifier for this user"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the user created"
+        },
+        "email": {
+            "type": "string",
+            "description": "Email address of the user created"
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp when user creation occurred"
+        },
+        "identity": {
+            "type": "object",
+            "properties": {
+                "avatar": {
+                    "type": "string",
+                    "description": "Image URL of the user's avatar if we have it"
+                },
+                "identityId": {
+                    "type": "string",
+                    "description": "Unique identifier of the user as seen by the identity provider"
+                },
+                "identityProviderId": {
+                    "type": "string",
+                    "description": "Unique name of the identity provider",
+                    "enum": ["google", "github"]
+                }
+            },
+            "required": [
+                "identityId", "identityProviderId"
+            ]
+        }        
+    },
+    "required": [
+        "userId",
+        "name",
+        "identity",
+        "email",
+        "timestamp"
+    ]
+}

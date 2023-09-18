@@ -1,20 +1,20 @@
 module.exports = {
-  title: 'EventCatalog',
-  tagline: 'Discover, Explore and Document your Event Driven Architectures',
-  organizationName: 'Your Company',
-  projectName: 'Event Catalog',
-  editUrl: 'https://github.com/boyney123/eventcatalog-demo/edit/master',
+  title: 'LFG Heroes',
+  tagline: 'Be the hero we all need',
+  organizationName: 'Kevin Hoffman',
+  projectName: 'LFG Heroes',
+  editUrl: 'https://github.com/autodidaddict/lfgheroes-catalog',
   trailingSlash: true,
   primaryCTA: {
     label: 'Explore Events',
     href: '/events'
   },
   secondaryCTA: {
-    label: 'Getting Started',
-    href:"https://www.eventcatalog.dev/"
+    label: 'Go to the App',
+    href:"https://lfgtheroes.app"
   },
   logo: {
-    alt: 'EventCatalog Logo',
+    alt: 'LFG Heroes Logo',
     // found in the public dir
     src: 'logo.svg',
   },
@@ -31,20 +31,8 @@ module.exports = {
     { label: 'Services', href: '/services' },
     { label: 'Visualiser', href: '/visualiser' },
     { label: '3D Node Graph', href: '/overview' },
-    { label: 'GitHub', href: 'https://github.com/boyney123/eventcatalog-demo/edit/master' }
+    { label: 'GitHub', href: 'https://github.com/autodidaddict/lfgheroes' },
+    { label: "App", href: 'https://lfgheroes.app' }
   ],
-  users: [
-    {
-      id: 'dboyne',
-      name: 'David Boyne',
-      avatarUrl: 'https://pbs.twimg.com/profile_images/1262283153563140096/DYRDqKg6_400x400.png',
-      role: 'Developer',
-    },
-    {
-      id: 'mSmith',
-      name: 'Matthew Smith',
-      avatarUrl: 'https://randomuser.me/api/portraits/lego/3.jpg',
-      role: 'Developer',
-    },
-  ],
+  users: [],
 }
