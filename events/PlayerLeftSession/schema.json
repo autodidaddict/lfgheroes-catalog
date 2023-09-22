@@ -1,0 +1,34 @@
+{
+    "$id": "https://lfgheroes.com/events/PlayerLeftSession",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PlayerLeftSession",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique identifier for the session"
+        },
+        "gameId": {
+            "type": "string",
+            "description": "Globally unique identifier for the game"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Leaving player's unique ID"
+        },
+        "reason": {
+            "type": "string",
+            "description": "A description of why the player withdrew from the session"
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp"
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "playerId",        
+        "timestamp"
+    ]
+}

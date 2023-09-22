@@ -1,0 +1,35 @@
+{
+    "$id": "https://lfgheroes.com/events/PlayerCommended",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PlayerCommended",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique identifier for the session"
+        },
+        "sourcePlayerId": {
+            "type": "string",
+            "description": "ID of the player that left the commendation"
+        },
+        "targetPlayerId": {
+            "type": "string",
+            "description": "ID of the player that received the commendation"
+        },
+        "note": {
+            "type": "string",
+            "description": "An optional note describing the commendation"
+        },        
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp"
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "sourcePlayerId",
+        "targetPlayerId",
+        "timestamp"
+    ]
+}

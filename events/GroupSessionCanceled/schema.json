@@ -1,0 +1,35 @@
+{
+    "$id": "https://lfgheroes.com/events/GroupSessionCanceled",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "GroupSessionCanceled",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique ID for the group session"
+        },
+        "gameId": {
+            "type": "string",
+            "description": "Globally unique identifier for the game"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Canceling player's unique ID"
+        },    
+        "reason": {
+            "type": "string",
+            "description": "A description of the reason for cancellation"
+        },    
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp"
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "playerId",        
+        "timestamp",
+        "reason"
+    ]
+}

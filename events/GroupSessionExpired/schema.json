@@ -1,0 +1,34 @@
+{
+    "$id": "https://lfgheroes.com/events/GroupSessionExpired",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "GroupSessionExpired",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique ID for the group session"
+        },
+        "gameId": {
+            "type": "string",
+            "description": "Globally unique identifier for the game"
+        },
+        "userExpiry": {
+            "type": "boolean",
+            "description": "If true, the user's supplied expiration period expired. Otherwise the app's maximum session length elapsed."
+        },
+        "note": {
+            "type": "string",
+            "description": "A note from the system, if applicable"
+        },    
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp"
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "playerId",        
+        "timestamp"        
+    ]
+}

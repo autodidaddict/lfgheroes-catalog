@@ -1,0 +1,30 @@
+{
+    "$id": "https://lfgheroes.com/events/PlayerJoinedSession",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PlayerJoinedSession",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique identifier for the session"
+        },
+        "gameId": {
+            "type": "string",
+            "description": "Globally unique identifier for the game"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Joining player's unique ID"
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp"
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "playerId",        
+        "timestamp"
+    ]
+}

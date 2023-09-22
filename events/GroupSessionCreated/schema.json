@@ -1,0 +1,67 @@
+{
+    "$id": "https://lfgheroes.com/events/GroupSessionCreated",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "GroupSessionCreated",
+    "type": "object",
+    "properties": {
+        "sessionId": {
+            "type": "string",
+            "description": "Globally unique ID for the group session"
+        },
+        "gameId": {
+            "type": "string",
+            "description": "Globally unique identifier for the game"
+        },
+        "playerId": {
+            "type": "string",
+            "description": "Initiating player's unique ID"
+        },
+        "expires": {
+            "type": "integer",
+            "description": "If this session has an expiration period, this field contains the number of hours the session stays open"
+        },
+        "region": {
+            "type": "string",
+            "description": "A description of the region in which the player needs help, if applicable"
+        },
+        "server": {
+            "type": "string",
+            "description": "A description of the server on which the player resides, if applicable"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Freeform text describing the nature of the help request"
+        },
+        "minPlayers": {
+            "type": "integer",
+            "description": "Minimum number of players (excluding session owner) required for group"
+        },
+        "maxPlayers": {
+            "type": "integer",
+            "description": "Maximum number of players that can answer this call"
+        },
+        "timestamp": {
+            "type": "string",
+            "description": "RFC 3339 timestamp when call creation occurred"
+        },
+        "platform": {
+            "type": "string",
+            "description": "Platform on which the player needs help",
+            "enum": [
+                "xbox",
+                "playstation",
+                "pc",
+                "nintendo"
+            ]
+        }
+    },
+    "required": [
+        "sessionId",
+        "gameId",
+        "playerId",
+        "expires",
+        "timestamp",
+        "platform",
+        "maxPlayers"
+    ]
+}
